@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>문자열 객체 연습</title>
+</head>
+    <script>
+        var t = 'You are finally woken up, If only just to prove\
+        You are born to lead the way,Then be the first of you';
+        document.write(t.charAt(16),"<br/>");
+        document.write(t.indexOf("to"),"<br/>");
+        document.write(t.indexOf("to",16),"<br/>");
+        document.write(t.lastIndexOf("to"),"<br/>");
+        document.write(t.lastIndexOf("you",25),"<br/>");
+        document.write(t.match("are"),"<br/>");
+        document.write(t.search("you"),"<br/>");
+        document.write(t.substr(21,4),"<br/>");
+        document.write(t.substring(6, 12),"<br/>");
+        document.write(t.replace("the","this"),"<br/>");
+        document.write(t.toLowerCase(),"<br/>");
+        document.write(t.toUpperCase(),"<br/>");
+        document.write(t.length,"<br/>");
+
+        var s=t.split(" ");
+
+        document.write(s[0],"<br/>");
+        document.write(s[4],"<br/>");
+
+        var str="A";
+        var t=str.charCodeAt(0);
+
+        document.write(t);
+        document.write(String.fromCharCode(65),"<br/>");
+    </script>
+<body>
+
+</body>
+</html>

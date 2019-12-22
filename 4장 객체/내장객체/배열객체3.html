@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>배열 객체 메서드 3</title>
+</head>
+    <script>
+        var greenArr = ["구로디지털단지", "합정", "신촌", "을지로입구"];
+        var orangeArr = ["연신내", "경복궁", "충무로", "수서"];
+
+        greenArr.splice(2, 1, "역삼", "잠실새내");
+        console.log(greenArr);
+
+        var data1 = orangeArr.pop();
+        var data2 = orangeArr.shift();
+
+        orangeArr.push(data2);
+        console.log(orangeArr);
+
+        orangeArr.unshift(data1);
+        console.log(orangeArr);
+    </script>
+<body>
+
+</body>
+</html>
