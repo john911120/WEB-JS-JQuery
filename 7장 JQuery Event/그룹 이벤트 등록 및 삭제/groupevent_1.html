@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>그룹 이벤트 등록 메서드</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+<script>
+	$(function() {
+		$(".btn_1.on").on("mouseover focus", function(){
+            alert("HELLO~");
+        });
+
+        $(".btn_1").addClass("on");
+
+		$(document).on("mouseover focus",".btn_2.on", function(){
+            alert("Welcome~");
+        });
+        $(".btn_2").addClass("on");
+	});
+</script>
+</head>
+<body>
+    <div id="wrap">
+        <p><button class="btn_1">버튼1</button></p>
+        <p><button class="btn_2">버튼2</button></p>
+    </div>
+</body>
+</html>

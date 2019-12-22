@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>그룹 이벤트 등록 메서드1-2(이벤트 제거 메서드)</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+<script>
+	$(function() {
+        var baseFontSize = 14;
+        $(".zoomBtnZone button").on("click", zoomInOut);
+        function zoomInOut(){
+            if($(this).hasClass("zoomOutBtn")){
+                if(baseFontSize <=8) return false;
+                baseFontSize--;
+                }else if($(this).hasClass("zoomInBtn")){
+                    if(baseFontSize>=20) return false;
+                    baseFontSize++;
+                }else {
+                    baseFontSize = 14;
+                }
+                $(".fontSize").text(baseFontSize + "px");
+                $("body").css({fontSize:baseFontSize + "px"});
+            }
+    });
+</script>
+</head>
+<body>
+    <p class="zoomBtnZone">
+        <button class="zoomOutBtn">-</button>
+        <button class="originBtn">100%</button>
+        <button class="zoomInBtn">+</button>
+    </p>
+    <p class="fontSize">14px</p>
+    <div id="wrap">
+        으으윽.... 나온다. 안되... 안되.. 내가 고자라니..
+        에잇 나라 좆까네
+    </div>
+</body>
+</html>
