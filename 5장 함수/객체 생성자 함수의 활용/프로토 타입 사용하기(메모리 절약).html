@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>메모리 절약을 위한 프로토타입 사용하기</title>
+</head>
+    <script>
+         function CheckWeight(name, height, weight){
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight;
+        }
+        CheckWeight.prototype.getinfo = function() {
+            var str = ""
+                str += "이름 :" + this.userName + ",";
+                str += "키 :" + this.userHeight + ",";
+                str += "몸무게 :" + this.userWeight + "<br>";
+                return str;
+        }
+
+        CheckWeight.prototype.getResult = function(){
+            this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+            this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+                if(this.userWeight >= this.minWeight
+                    && this.userWeight <= this.maxWeight){
+                        return "정상 체중입니다.";
+                    } else if(this.userWeight < this.minWeight){
+                        return "정상 체중이 아니다. 미라 ㅄ";
+                    } else{
+                        return "돼지 ㅄ 샠희 ㅋㅋㅋ";
+                    }
+            }
+        
+        var sim = new CheckWeight("시명이", 170, 60);
+        var kim = new CheckWeight("김두한", 180, 90);
+        console.log(sim);
+        console.log(kim);
+
+        document.write(sim.getinfo());
+        document.write(sim.getResult());
+
+        document.write(sim.getResult === kim.getResult);
+    </script>
+
+<body>
+    
+</body>
+</html>

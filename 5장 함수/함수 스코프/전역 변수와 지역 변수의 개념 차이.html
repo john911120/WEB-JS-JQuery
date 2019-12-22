@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>전역 변수와 지역 변수의 개념 차이</title>
+</head>
+    <script>
+        var score = 100;
+
+        function myFnc(){
+            var score = 50;
+
+            alert(score);
+        }
+
+        myFnc();
+
+        alert(score);
+    </script>
+<body>
+    
+</body>
+</html>

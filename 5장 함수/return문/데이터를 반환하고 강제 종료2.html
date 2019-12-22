@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>데이터 반환하고 강제종료2</title>
+</head>
+    <script>
+        var num = 1;
+        function gallary(direct){
+            if(direct){
+                if(num == 8) return;
+                num++;
+            } else {
+                if(num == 1) return;
+                num--;
+            }
+            
+            var imgTag = document.getElementById("photo");
+            imgTag.setAttribute("src","image/pic_" + num + ".jpg");
+        }
+    </script>
+<body>
+    <div id="gallaryZone">
+        <p><img src="image/download.jpg" id="photo" alt=""></p>
+        <p>
+            <button onclick="gallary(0)">이전</button>
+            <button onclick="gallary(1)">다음</button>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>inArray/isArray/merge메서드</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+    <script>
+         $(function(){
+            var arr1 = ["서울", "대전", "대구", "부평"];
+
+            var arr2 = ["한국", "일본", "미국", "러시아"];
+
+            var obj = {
+                "name" : "시명이",
+                "area" : "서울"
+            }
+
+            var idxNum = $.inArray("부산", arr1);
+            console.log(idxNum);
+
+            var okArray1 = $.isArray(arr1);
+            var okArray2 = $.isArray(obj);
+            console.log(okArray1);
+            console.log(okArray2);
+
+            $.merge(arr2, arr1);
+            console.log(arr2);
+        });
+    </script>
+<body>
+    <h1> 탐색 선택자 </h1>
+    <ul id="menu1">
+        <li> 내용1-1 </li>
+        <li> 내용1-2 </li>
+        <li> 내용1-3 </li>
+    </ul>
+    <ul id="menu2">
+        <li> 내용2-1 </li>
+        <li> 내용2-2 </li>
+        <li> 내용2-3 </li>
+    </ul>
+</body>
+</html>
